@@ -1,0 +1,78 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/navbar.ejs %>
+<%- include ../../partials/sidebar.ejs %>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Data Pegawai</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+              <li class="breadcrumb-item"><a href="/employee">Data Pegawai</a></li>
+              <li class="breadcrumb-item active">Add Data</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Add Data Pegawai</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form action="/employee/create" method="POST">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="nama">Nama</label>
+                      <input type="text" class="form-control" name="nama" id="nama" placeholder="Tri Tiara Penina Deby" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="nip">NIP</label>
+                      <input type="number" class="form-control" name="nip" id="nip" placeholder="123456789">
+                    </div>
+                    <div class="form-group">
+                      <label for="tmt_cpns">TMT CPNS</label>
+                      <input type="number" class="form-control" name="tmt_cpns" id="tmt_cpns" placeholder="2018">
+                    </div>
+                    <div class="form-group">
+                      <label for="tmt_pensiun">TMT Pensiun</label>
+                      <input type="date" class="form-control" name="tmt_pensiun" id="tmt_pensiun" placeholder="2022">
+                    </div>
+                    <div class="form-group">
+                      <label for="masa_kerja">Masa Kerja</label>
+                      <input type="number" class="form-control" name="masa_kerja" id="masa_kerja" placeholder="4 Tahun">
+                    </div>
+                    <div class="form-group">
+                      <label for="jabatan">Jabatan</label>
+                      <input type="text" class="form-control" name="jabatan" id="jabatan" placeholder="Accounting">
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+ <%- include ../../partials/footer.ejs %>
+<%- include ../../partials/js.ejs %>
